@@ -6,9 +6,9 @@ import org.kohsuke.github.GHRepository;
 import java.util.List;
 
 public class RepositoryDescription {
-    private String name;
-    private GHRepository repository;
-    private List<GHPullRequest> prs;
+    private final String name;
+    private final GHRepository repository;
+    private final List<GHPullRequest> prs;
 
     public RepositoryDescription(String name, GHRepository repository, List<GHPullRequest> prs) {
         this.name = name;

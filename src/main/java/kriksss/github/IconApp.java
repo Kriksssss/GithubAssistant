@@ -2,8 +2,6 @@ package kriksss.github;
 
 import java.awt.*;
 import java.io.IOException;
-import java.net.MulticastSocket;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.List;
@@ -38,7 +36,7 @@ public class IconApp {
         notificationAcc.addActionListener(e -> openInBrowser("https://github.com/notifications" ));
 
 
-        Menu menu = new Menu("repositories");
+        Menu menu = new Menu("Repositories");
         reposDesc
                 .forEach(repo -> {
                     String name = repo.getPrs().size() > 0

@@ -6,7 +6,6 @@ import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
 
 import java.io.IOException;
-import java.sql.Time;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -59,7 +58,6 @@ public class GitHubsAssistant {
                                             repository.getFullName(),
                                             repository, prs
                                     );
-                                    // чтоб был чище код, представление не должен знать о данных, полученных из API
                                 } catch (IOException e) {
                                     throw new RuntimeException(e);
                                 }
@@ -70,7 +68,7 @@ public class GitHubsAssistant {
 
                     if (empty) {
                         newPrs.forEach(pullRequest -> {
-                            iconApp.showNotification("New PR in"
+                            iconApp.showNotification("new PR in"
                                     + pullRequest.getRepository().getFullName(), pullRequest.getTitle());
                         });
                     }
